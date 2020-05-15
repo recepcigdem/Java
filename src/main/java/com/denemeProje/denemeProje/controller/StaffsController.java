@@ -21,6 +21,7 @@ public class StaffsController {
     @GetMapping("/staffs")
     public List<Staffs> get() {
         return staffService.getAll();
+        //test
     }
 
     @PostMapping("/add")

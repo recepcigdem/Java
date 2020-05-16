@@ -30,13 +30,18 @@ public class HibernateStaffsDal implements IStaffsDal {
     @Override
     public void add(Staffs staff) {
         Session session = entityManager.unwrap(Session.class);
-        session.saveOrUpdate(staff);
+        session.save(staff);
     }
 
     @Override
     public void update(Staffs staff) {
         Session session = entityManager.unwrap(Session.class);
-        session.saveOrUpdate(staff);
+        session.beginTransaction();
+        session.flush();
+        session.update(staff);
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
     }
 
     @Override

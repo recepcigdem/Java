@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IStaffsService {
     List<Staffs> getAll();
-    void add(Staffs staff);
+    void add(Staffs staffs);
     void update(Staffs staff);
     void delete(Staffs staff);
     Staffs getById(int staffId);

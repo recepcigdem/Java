@@ -1,7 +1,7 @@
 package com.denemeProje.denemeProje.controller;
 
 import com.denemeProje.denemeProje.Business.IStaffsService;
-import com.denemeProje.denemeProje.Entities.*;
+import com.denemeProje.denemeProje.Entities.Staffs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class StaffsController {
 
-    private IStaffsService staffService;
+    private final IStaffsService staffService;
 
     @Autowired
     public StaffsController(IStaffsService staffService) {
@@ -21,7 +21,7 @@ public class StaffsController {
     @GetMapping("/staffs")
     public List<Staffs> get() {
         return staffService.getAll();
-        //test
+
     }
 
     @PostMapping("/add")
@@ -34,6 +34,11 @@ public class StaffsController {
         staffService.update(staff);
     }
 
+    @PostMapping("/update2")
+    public void update2(@RequestBody Staffs staff) {
+        staffService.update(staff);
+    }
+
     @PostMapping("/delete")
     public void delete(@RequestBody Staffs staff) {
         staffService.delete(staff);
@@ -43,9 +48,8 @@ public class StaffsController {
     public Staffs getById(@PathVariable int id) {
         return staffService.getById(id);
     }
-
-    @GetMapping("/staffs/{userName}")
-    public Staffs getByUserName(@PathVariable String userName) {
+    @GetMapping("/staffs2")
+    public Staffs getByUserName(@PathVariable("userName") String userName) {
         return staffService.getByUserName(userName);
     }
 }

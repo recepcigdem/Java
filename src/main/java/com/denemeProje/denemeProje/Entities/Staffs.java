@@ -8,8 +8,9 @@ public class Staffs {
 
     @Id
     @Column(name = "staff_id")
-    private Long staffId;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long staffId;
+
 
     @Column(name = "first_name")
     private String firstName;

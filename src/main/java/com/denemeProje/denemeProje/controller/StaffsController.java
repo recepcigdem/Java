@@ -34,11 +34,6 @@ public class StaffsController {
         staffService.update(staff);
     }
 
-    @PostMapping("/update2")
-    public void update2(@RequestBody Staffs staff) {
-        staffService.update(staff);
-    }
-
     @PostMapping("/delete")
     public void delete(@RequestBody Staffs staff) {
         staffService.delete(staff);
@@ -48,7 +43,7 @@ public class StaffsController {
     public Staffs getById(@PathVariable int id) {
         return staffService.getById(id);
     }
-    @GetMapping("/staffs2")
+    @GetMapping("/staffs/{userName}")
     public Staffs getByUserName(@PathVariable("userName") String userName) {
         return staffService.getByUserName(userName);
     }

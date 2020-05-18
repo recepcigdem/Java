@@ -1,6 +1,6 @@
 package com.denemeProje.denemeProje.Business;
 
-import com.denemeProje.denemeProje.Entities.*;
+import com.denemeProje.denemeProje.Entities.Staffs;
 
 import java.util.List;
 

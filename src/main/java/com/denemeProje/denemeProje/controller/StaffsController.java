@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class StaffsController {
 
+
     private final IStaffsService staffService;
 
     @Autowired
@@ -23,18 +24,17 @@ public class StaffsController {
         return staffService.getAll();
 
     }
-
-    @PostMapping("/add")
+    @PostMapping("/staffs/add")
     public void add(@RequestBody Staffs staff) {
         staffService.add(staff);
     }
 
-    @PostMapping("/update")
+    @PostMapping("/staffs/update")
     public void update(@RequestBody Staffs staff) {
         staffService.update(staff);
     }
 
-    @PostMapping("/delete")
+    @PostMapping("/staffs/delete")
     public void delete(@RequestBody Staffs staff) {
         staffService.delete(staff);
     }
@@ -43,6 +43,7 @@ public class StaffsController {
     public Staffs getById(@PathVariable int id) {
         return staffService.getById(id);
     }
+
     @GetMapping("/staffs/{userName}")
     public Staffs getByUserName(@PathVariable("userName") String userName) {
         return staffService.getByUserName(userName);

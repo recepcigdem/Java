@@ -41,12 +41,11 @@ public class StaffsManager implements IStaffsService{
 
     @Override
     public Staffs getById(int staffId) {
-        //return this.iStaffsDal.getById(staffId);
         return this.iSpringStaffs.findStaffsByStaffId(staffId);
     }
 
-    @Override
-    public Staffs getByUserName(String userName) {
-        return this.iSpringStaffs.findStaffsByUserName(userName);
-    }
+//    @Override
+//    public Staffs getByUserName(String userName) {
+//        return this.iSpringStaffs.findStaffsByUserName(userName);
+//    }
 }

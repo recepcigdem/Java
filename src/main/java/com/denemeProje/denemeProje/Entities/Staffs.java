@@ -1,9 +1,6 @@
 package com.denemeProje.denemeProje.Entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Staffs {
@@ -18,6 +15,7 @@ public class Staffs {
     private boolean active;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "staff_id")
     public int getStaffId() {
         return staffId;

@@ -10,5 +10,5 @@ public interface IStaffsService {
     void update(Staffs staff);
     void delete(Staffs staff);
     Staffs getById(int staffId);
-    Staffs getByUserName(String userName);
+   // Staffs getByUserName(String userName);
 }

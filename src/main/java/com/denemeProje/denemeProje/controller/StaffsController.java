@@ -29,7 +29,7 @@ public class StaffsController {
         staffService.add(staff);
     }
 
-    @PostMapping("/staffs/update")
+    @PutMapping("/staffs/update")
     public void update(@RequestBody Staffs staff) {
         staffService.update(staff);
     }
@@ -44,8 +44,8 @@ public class StaffsController {
         return staffService.getById(id);
     }
 
-    @GetMapping("/staffs/{userName}")
-    public Staffs getByUserName(@PathVariable("userName") String userName) {
-        return staffService.getByUserName(userName);
-    }
+//    @GetMapping("/staffs/{userName}")
+//    public Staffs getByUserName(@PathVariable("userName") String userName) {
+//        return staffService.getByUserName(userName);
+//    }
 }

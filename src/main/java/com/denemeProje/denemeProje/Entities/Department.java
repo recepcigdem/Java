@@ -1,9 +1,6 @@
 package com.denemeProje.denemeProje.Entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Department {
@@ -11,6 +8,7 @@ public class Department {
     private String description;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "department_id")
     public int getDepartmentId() {
         return departmentId;

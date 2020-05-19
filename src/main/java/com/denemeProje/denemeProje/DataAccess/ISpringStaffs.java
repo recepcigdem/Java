@@ -9,7 +9,7 @@ public interface ISpringStaffs extends JpaRepository<Staffs,Long> {
 
     public Staffs findStaffsByStaffId(Integer id);
 
-    public Staffs findStaffsByUserName(String userName);
+    //public Staffs findStaffsByUserName(String userName);
 
 
 }

@@ -9,12 +9,12 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class DepartmentManagar implements IDepartmentService{
+public class DepartmentManager implements IDepartmentService{
 
     private ISpringDepartment iSpringDepartment;
 
     @Autowired
-    public DepartmentManagar(ISpringDepartment iSpringDepartment){
+    public DepartmentManager(ISpringDepartment iSpringDepartment){
         this.iSpringDepartment=iSpringDepartment;
     }
 

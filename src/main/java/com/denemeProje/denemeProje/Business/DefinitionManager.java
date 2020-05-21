@@ -27,7 +27,7 @@ public class DefinitionManager implements IDefinitionService{
 
     @Override
     public void add(Definition definition) {
-    this.iSpringDefinition.save(definition);
+        this.iSpringDefinition.save(definition);
     }
 
     @Override

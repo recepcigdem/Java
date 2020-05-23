@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface ISpringDefinition extends JpaRepository<Definition,Long> {
 
     public Definition findDefinitionByDefinitionId(Integer id);
+
+    public Definition findDefinitionByCategoryId(Integer categoryid);
 }

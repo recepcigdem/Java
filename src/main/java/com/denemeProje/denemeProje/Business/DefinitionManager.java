@@ -44,4 +44,8 @@ public class DefinitionManager implements IDefinitionService{
     public Definition getById(int definitionId) {
         return this.iSpringDefinition.findDefinitionByDefinitionId(definitionId);
     }
+    @Override
+    public Definition getByCategoryId(int categoryId) {
+        return this.iSpringDefinition.findDefinitionByCategoryId(categoryId);
+    }
 }

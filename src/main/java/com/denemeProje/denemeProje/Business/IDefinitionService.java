@@ -11,4 +11,5 @@ public interface IDefinitionService {
     void delete(Definition definition);
     void update(Definition definition);
     Definition getById(int definitionId);
+    Definition getByCategoryId(int categoryId);
 }

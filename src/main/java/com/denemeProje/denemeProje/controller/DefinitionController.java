@@ -43,7 +43,7 @@ public class DefinitionController {
     }
 
     @GetMapping("/definition/category/{categoryId}")
-    public Definition getByCategoryId(@PathVariable("categoryId") int categoryId){
-        return iDefinitionService.getByCategoryId(categoryId);
+    public List<Definition> getByCategoryId(@PathVariable("categoryId") int categoryId){
+        return  iDefinitionService.getByCategoryId(categoryId);
     }
 }

@@ -25,6 +25,7 @@ public class DefinitionManager implements IDefinitionService{
         return this.iSpringDefinition.findAll();
     }
 
+
     @Override
     public void add(Definition definition) {
         this.iSpringDefinition.save(definition);
@@ -45,7 +46,7 @@ public class DefinitionManager implements IDefinitionService{
         return this.iSpringDefinition.findDefinitionByDefinitionId(definitionId);
     }
     @Override
-    public Definition getByCategoryId(int categoryId) {
+    public List<Definition> getByCategoryId(int categoryId) {
         return this.iSpringDefinition.findDefinitionByCategoryId(categoryId);
     }
 }

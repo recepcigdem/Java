@@ -3,21 +3,21 @@ package com.denemeProje.denemeProje.Entities;
 import javax.persistence.*;
 
 @Entity
-public class Trademark {
-    private int trademarkId;
+public class Gender {
+    private int genderId;
     private boolean active;
     private String code;
     private String description;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "trademark_id")
-    public int getTrademarkId() {
-        return trademarkId;
+    @Column(name = "gender_id")
+    public int getGenderId() {
+        return genderId;
     }
 
-    public void setTrademarkId(int trademarkId) {
-        this.trademarkId = trademarkId;
+    public void setGenderId(int genderId) {
+        this.genderId = genderId;
     }
 
     @Basic
@@ -55,20 +55,19 @@ public class Trademark {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Trademark trademark = (Trademark) o;
+        Gender gender = (Gender) o;
 
-        if (trademarkId != trademark.trademarkId) return false;
-        if (active != trademark.active) return false;
-        if (code != null ? !code.equals(trademark.code) : trademark.code != null) return false;
-        if (description != null ? !description.equals(trademark.description) : trademark.description != null)
-            return false;
+        if (genderId != gender.genderId) return false;
+        if (active != gender.active) return false;
+        if (code != null ? !code.equals(gender.code) : gender.code != null) return false;
+        if (description != null ? !description.equals(gender.description) : gender.description != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = trademarkId;
+        int result = genderId;
         result = 31 * result + (active ? 1 : 0);
         result = 31 * result + (code != null ? code.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);

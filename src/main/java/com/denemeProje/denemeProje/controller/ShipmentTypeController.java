@@ -23,17 +23,17 @@ public class ShipmentTypeController {
     }
 
     @PostMapping("/shipmenttype/add")
-    public void add(Shipmenttype shipmenttype){
+    public void add(@RequestBody Shipmenttype shipmenttype){
         this.iShipmentTypeService.add(shipmenttype);
     }
 
     @PutMapping("/shipmenttype/update")
-    public void update(Shipmenttype shipmenttype){
+    public void update(@RequestBody Shipmenttype shipmenttype){
         this.iShipmentTypeService.update(shipmenttype);
     }
 
     @PostMapping("/shipmenttype/delete")
-    public void delete(Shipmenttype shipmenttype){
+    public void delete(@RequestBody Shipmenttype shipmenttype){
         this.iShipmentTypeService.delete(shipmenttype);
     }
 

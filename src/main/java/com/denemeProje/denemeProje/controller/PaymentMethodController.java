@@ -24,17 +24,17 @@ public class PaymentMethodController {
     }
 
     @PostMapping("/paymentmethod/add")
-    public void add(Paymentmethod paymentmethod){
+    public void add(@RequestBody Paymentmethod paymentmethod){
         iPaymentMethodService.add(paymentmethod);
     }
     @PutMapping("/paymentmethod/update")
-    public void update(Paymentmethod paymentmethod){
+    public void update(@RequestBody Paymentmethod paymentmethod){
         iPaymentMethodService.update(paymentmethod);
     }
 
     @PostMapping("/paymentmethod/delete")
-    public void delete(Paymentmethod paymentmethod){
-        iPaymentMethodService.update(paymentmethod);
+    public void delete(@RequestBody Paymentmethod paymentmethod){
+        iPaymentMethodService.delete(paymentmethod);
     }
     @GetMapping("/paymentmethod/{id}")
     public void update(@PathVariable int paymentmethodid){

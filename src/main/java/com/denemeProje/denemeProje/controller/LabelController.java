@@ -24,15 +24,15 @@ public class LabelController {
         return this.iLabelService.getAll();
     }
     @PostMapping("/label/add")
-    public void add(Label label){
+    public void add(@RequestBody Label label){
         this.iLabelService.add(label);
     }
     @PutMapping("/label/update")
-    public void update(Label label){
+    public void update(@RequestBody Label label){
         this.iLabelService.update(label);
     }
     @PostMapping("/label/delete")
-    public void delete(Label label){
+    public void delete(@RequestBody Label label){
         this.iLabelService.delete(label);
     }
 

@@ -19,7 +19,7 @@ public class TrandeMarkController {
     }
 
     @GetMapping("/trademark")
-    public List<Trademark> get() {
+    public List<Trademark> getAll() {
         return iTradeMarkService.getAll();
 
     }

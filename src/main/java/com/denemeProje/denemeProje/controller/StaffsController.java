@@ -20,7 +20,7 @@ public class StaffsController {
     }
 
     @GetMapping("/staffs")
-    public List<Staffs> get() {
+    public List<Staffs> getAll() {
         return staffService.getAll();
 
     }
